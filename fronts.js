@@ -30,12 +30,20 @@ class SLL{
         console.log(this.head.value);
         return this.head.Node;
     }
+
+    contains(value){
+        while (this.head != null){
+            if(this.head.value == value){
+                return true;
+            }
+            this.head = this.head.next;
+        }
+        return false;
+    }
 }
 
 // addFront("kelly");
 var newList = new SLL;
 newList.addFront("kelly").addFront("Bill");
-newList.addFront("Bob");
-newList.removeFront();
-newList.front();
-console.log(newList);
+newList.addFront("Bob");  
+newList.contains("kelly");
