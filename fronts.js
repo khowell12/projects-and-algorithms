@@ -49,6 +49,21 @@ class SLL{
         console.log(count);
         return count;
     }
+    display(){
+        var str = "";
+        while(this.head != null){
+            if (this.head.next == null){
+                str += this.head.value;
+                break;
+            }
+            else{
+            str += this.head.value + ", ";
+            this.head = this.head.next;
+            }
+        }
+        console.log(str);
+        return str;
+    }
 }
 
 // addFront("kelly");
@@ -56,4 +71,5 @@ class SLL{
  newList.addFront("kelly").addFront("Bill");
  newList.addFront("Bob");  
 // newList.contains("kelly");
- newList.listLength();
+// newList.listLength();
+ newList.display();
