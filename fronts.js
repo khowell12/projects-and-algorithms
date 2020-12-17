@@ -64,6 +64,43 @@ class SLL{
         console.log(str);
         return str;
     }
+    max(){
+        var max = this.head.value;
+        while (this.head != null){
+            if (max < this.head.value ){
+                max = this.head.value;
+            }
+            this.head = this.head.next;
+        }
+        console.log(max);
+        return max;
+
+    }
+    min(){
+        var min = this.head.value;
+        while (this.head != null){
+            if (min > this.head.value ){
+                min = this.head.value;
+            }
+            this.head = this.head.next;
+        }
+        console.log(min);
+        return min;
+    }
+    avg(){
+        var sum = 0;
+        var length = 0;
+        while (this.head != null){
+            sum+= this.head.value;
+            length+=1;
+            this.head = this.head.next;
+            
+        }
+        var avg = sum / length;
+        console.log(avg);
+        return avg;
+
+    }
 }
 
 // addFront("kelly");
@@ -72,4 +109,8 @@ class SLL{
  newList.addFront("Bob");  
 // newList.contains("kelly");
 // newList.listLength();
- newList.display();
+// newList.display();
+ var numList = new SLL;
+ numList.addFront(4).addFront(0).addFront(6).addFront(2);
+ numList.avg();
+ //numList.listLength();
