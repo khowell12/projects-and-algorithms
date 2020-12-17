@@ -40,10 +40,20 @@ class SLL{
         }
         return false;
     }
+    listLength(){
+        var count = 0;
+        while (this.head != null){
+            count += 1;
+            this.head = this.head.next;
+        }
+        console.log(count);
+        return count;
+    }
 }
 
 // addFront("kelly");
-var newList = new SLL;
-newList.addFront("kelly").addFront("Bill");
-newList.addFront("Bob");  
-newList.contains("kelly");
+ var newList = new SLL;
+ newList.addFront("kelly").addFront("Bill");
+ newList.addFront("Bob");  
+// newList.contains("kelly");
+ newList.listLength();
